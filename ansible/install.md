@@ -3,8 +3,8 @@
 
 ### To configure the PPA on your system and install Ansible run these commands:
 ```
-sudo apt update -y
-sudo apt install software-properties-common
+sudo apt update 
+sudo apt install software-properties-common -y
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible -y
 ```
