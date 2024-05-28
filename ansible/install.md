@@ -1,6 +1,10 @@
-## create a user on all machines ( controller & all targets )
+# Installing Ansible on Ubuntu
+### Ubuntu builds are available in a PPA here.
 
+### To configure the PPA on your system and install Ansible run these commands:
 ```
-sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/setupUser.sh -P /tmp
-sudo bash /tmp/setupUser.sh
+sudo apt update -y
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible -y
 ```
