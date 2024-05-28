@@ -7,15 +7,3 @@
 	
 	USERNAME: devops
 	PASSWORD: today@1234
-
-### genereate ssh keys for above user on contrller machine 
-
-```
-1) switch to user ( su - devops )
-2) run "ssh-keygen" command as user ( this will genereate ssh keys for the user ) 
-
-validate:
-     
-  cd /home/devops/.ssh 
-  cat id_rsa.pub 
-```
