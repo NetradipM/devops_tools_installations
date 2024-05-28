@@ -1,10 +1,21 @@
-##ansible install and scrpt.sh
-```
-$ sudo apt update
-$ sudo apt install software-properties-common -y
-$ sudo add-apt-repository --yes --update ppa:ansible/ansible
-$ sudo apt install ansible -y
+## create a user on all machines ( controller & all targets )
+
+        sudo wget https://raw.githubusercontent.com/lerndevops/labs/master/scripts/setupUser.sh -P /tmp
+	sudo bash /tmp/setupUser.sh
+	
+	Note: above script will setup username & password as below 
+	
+	USERNAME: devops
+	PASSWORD: today@1234
+
+### genereate ssh keys for above user on contrller machine 
 
 ```
-#slave agents install 
-$ slave ansible -y
+1) switch to user ( su - devops )
+2) run "ssh-keygen" command as user ( this will genereate ssh keys for the user ) 
+
+validate:
+     
+  cd /home/devops/.ssh 
+  cat id_rsa.pub 
+```
